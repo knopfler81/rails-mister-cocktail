@@ -38,6 +38,10 @@ gem "simple_form"
 gem "autoprefixer-rails"
 
 gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
+gem 'rails-controller-testing'
+
+gem 'awesome_print', '~> 1.7'
+gem 'pry-byebug', '~> 3.4', '>= 3.4.2'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

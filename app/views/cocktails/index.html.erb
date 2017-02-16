@@ -1,10 +1,15 @@
-<h1>Cocktails List</h1>
+<h1 class="text-center">Cocktails List</h1>
 
-<ul class= "list-unstyled">
-  <% @cocktails.each do |cocktail| %>
-    <li>
-    <%= link_to cocktail.name, cocktail_path(cocktail)%>
+<div class="row">
 
-    </li>
-  <% end %>
-</ul>
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <ul class= "list-unstyled text-left">
+      <% @cocktails.each do |cocktail| %>
+        <li class="listing">
+          <i class="fa fa-glass"></i> <%= link_to cocktail.name, cocktail_path(cocktail)%>
+        </li>
+      <% end %>
+    </ul>
+      <%= link_to "Add a cocktail", new_cocktail_path, class:"btn btn-primary" %>
+  </div>
+</div>
