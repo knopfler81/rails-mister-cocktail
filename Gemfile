@@ -36,6 +36,8 @@ gem "bootstrap-sass"
 gem "font-awesome-sass"
 gem "simple_form"
 gem "autoprefixer-rails"
+gem 'figaro'
+
 
 gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
 gem 'rails-controller-testing'

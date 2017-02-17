@@ -31,5 +31,4 @@ descriptions = ["3cl", "10gr", "3 cubes", "5 leaves"]
   mojito.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample) #cocktail_id is already added
   brain.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
   sunrize.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
-
 end
