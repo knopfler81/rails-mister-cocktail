@@ -1,16 +1,23 @@
-<h1 class="text-center">Cocktails List</h1>
-
-<div class="row">
-  <% @cocktails.each do |cocktail| %>
-    <div class="col-xs-12 col-sm-3 card">
-       <i class="fa fa-glass glass"></i>
-       <h2 class="card-description"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
-    </div>
-    <% end %>
-</div>
-
-<!-- <div class="row">
-  <div class="col-xs-12">
-    <%= link_to "Add a cocktail", new_cocktail_path, class:"btn btn-primary" %>
+<div class="banner">
+  <div class="banner-content">
+    <h1>Mister Cocktail</h1>
+      <%= link_to "Create yours!", new_cocktail_path, class: "btn btn-warning"  %>
   </div>
-</div> -->
+</div>
+<div class="container">
+  <div class="row cocktail-list">
+  <h2 class="text-center">Our fabulous cocktails</h2>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-3">
+        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path cocktail.photo %>');">
+
+           <h2 class="card-description"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
+
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+
+</div>

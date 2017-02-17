@@ -9,12 +9,12 @@ require 'open-uri'
 require  'json'
 
 
-Cocktail.destroy_all
+# Cocktail.destroy_all
 
-mojito = Cocktail.create!(name: "Mojito")
-bloody = Cocktail.create!(name: "Bloody Mary")
-brain = Cocktail.create!(name: "Cervelle de Singe")
-sunrize = Cocktail.create!(name: "Couché de Soleil")
+# mojito = Cocktail.create!(name: "Mojito")
+# bloody = Cocktail.create!(name: "Bloody Mary")
+# brain = Cocktail.create!(name: "Cervelle de Singe")
+# sunrize = Cocktail.create!(name: "Couché de Soleil")
 
 ingredient_url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 doc = open(ingredient_url).read
@@ -24,11 +24,11 @@ json['drinks'].each do  |ingredient|
   Ingredient.create! name: ingredient["strIngredient1"]
 end
 
-descriptions = ["3cl", "10gr", "3 cubes", "5 leaves"]
+# descriptions = ["3cl", "10gr", "3 cubes", "5 leaves"]
 
-4.times do
-  bloody.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample) #cocktail_id is already added
-  mojito.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample) #cocktail_id is already added
-  brain.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
-  sunrize.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
-end
+# 4.times do
+#   bloody.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample) #cocktail_id is already added
+#   mojito.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample) #cocktail_id is already added
+#   brain.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
+#   sunrize.doses.create(description: descriptions.sample, ingredient: Ingredient.all.sample)
+# end
