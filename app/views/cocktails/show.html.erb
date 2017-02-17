@@ -4,7 +4,7 @@
     <!-- <i class="fa fa-glass big-glass"></i> -->
 
     <div class="col-xs-12 col-sm-6">
-     <%= image_tag(@cocktail.photo.url(:standard))  %>
+     <%= cl_image_tag(@cocktail.photo, :transformation=>[{ radius: "max", :crop=>"scale", :height =>"400", :width => "400"}])  %>
     </div>
     <div class="col-xs-12 col-sm-6">
       <ul class="list-unstyled">
