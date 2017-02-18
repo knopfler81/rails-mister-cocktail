@@ -43,9 +43,8 @@ gem 'carrierwave', '~> 0.11.2'
 
 gem 'nokogiri', '~> 1.7', '>= 1.7.0.1'
 gem 'rails-controller-testing'
-
 gem 'awesome_print', '~> 1.7'
-gem 'pry-byebug', '~> 3.4', '>= 3.4.2'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,6 +52,7 @@ gem 'pry-byebug', '~> 3.4', '>= 3.4.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-byebug', '~> 3.4', '>= 3.4.2'
 end
 
 group :development do

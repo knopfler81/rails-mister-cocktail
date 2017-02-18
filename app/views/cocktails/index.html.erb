@@ -8,6 +8,17 @@
   <div class="row cocktail-list">
   <h2 class="text-center">Our fabulous cocktails</h2>
 
+  <% if @cocktail_search %>
+    <% @cocktail_search.each do |cocktail| %>
+     <div class="col-xs-12 col-sm-3">
+        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+           url('<%= cl_image_path cocktail.photo %>');">
+
+           <h2 class="card-description"><%= link_to cocktail.name, cocktail_path(cocktail)%></h2>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-3">
         <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
@@ -17,5 +28,9 @@
         </div>
       </div>
     <% end %>
+  <% end %>
   </div>
 </div>
+
+
+
