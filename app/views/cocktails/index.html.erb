@@ -1,9 +1,15 @@
 <div class="banner">
   <div class="banner-content">
     <h1>Mister Cocktail</h1>
-      <%= link_to "Create yours!", new_cocktail_path, class: "btn btn-warning"  %>
+
+    <%= simple_form_for :query,  url: cocktails_path, :method => :get,  wrapper: :inline_form, html: {class: 'form-inline'} do |f| %>
+       <%= f.input :search, label: false, placeholder: "Find a cocktail"%>
+       <%= f.button :submit, "Find", class:"btn btn-warning" %>
+    <% end %>
+
   </div>
 </div>
+
 <div class="container">
   <div class="row cocktail-list">
   <h2 class="text-center">Our fabulous cocktails</h2>
