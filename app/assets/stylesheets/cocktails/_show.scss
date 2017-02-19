@@ -1,7 +1,7 @@
 .cocktail-title {
   color: $orange;
   font-size: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .big-glass {
@@ -10,4 +10,32 @@
 
 .cocktail-big {
   border-radius: 5px;
+}
+
+.cocktail-pic {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+
+}
+
+.left-cocktail {
+  border-right: 1px solid lightgray;
+}
+
+
+.trash-cocktail {
+  padding-left: 10px;
+}
+
+.dose-list {
+  font-size: 20px;
+  strong{
+    color: $orange;
+  };
+  span{
+  color: gray;
+  font-style: italic;
+  };
 }
